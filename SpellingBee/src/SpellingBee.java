@@ -97,14 +97,12 @@ public class SpellingBee {
             return;
         }
 
-        // Mid is the index of the middle of the array.
         int mid = (low+high)/2;
         // Makes a recursive call with the first half of the array.
         mergeSort(low, mid);
         // Calls itself with the second half of the array.
         mergeSort(mid + 1,high);
         // Calls merge in order to merge the two arrays.
-        // Takes in the indexes for the low, high, and mid.
         merge(low, high, mid);
     }
 
@@ -124,7 +122,6 @@ public class SpellingBee {
             if(words.get(i).compareTo(words.get(j)) < 0)
             {
                 copy.add(words.get(i));
-                // i is increased so there.
                 i++;
             }
             // if the word at j is alphabetically higher than the word at i, than the word at j gets added.
